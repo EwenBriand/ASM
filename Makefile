@@ -25,7 +25,7 @@ NAME	=	a.out
 
 LIBNAME	=	libasm.so
 
-all:	makelib
+all:	$(NAME)
 
 $(NAME):	makelib
 	gcc -o $(NAME) $(MAIN) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS)
