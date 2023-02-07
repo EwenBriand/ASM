@@ -1,5 +1,5 @@
 SECTION .text
-  Global mystrcmp
+  Global strcmp
 
 mystrcmp:
     push rbp

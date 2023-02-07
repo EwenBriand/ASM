@@ -1,5 +1,5 @@
 SECTION .text
-  GLOBAL mystrlen
+  GLOBAL strlen
 
 
 mystrlen:

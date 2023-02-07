@@ -1,5 +1,5 @@
 SECTION .text
-  global mystrpbrk
+  global strpbrk
 
 
 mystrpbrk:

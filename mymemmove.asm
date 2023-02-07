@@ -1,5 +1,5 @@
 SECTION .text
-  GLOBAL mymemmove
+  GLOBAL memmove
 
 ; mymemmove:
 ;     push rbp

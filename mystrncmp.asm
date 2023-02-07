@@ -1,6 +1,6 @@
 
 SECTION .text
-    global mystrncmp
+    global strncmp
 
 mystrncmp:
     push rbp

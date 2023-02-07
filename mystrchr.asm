@@ -1,5 +1,5 @@
 SECTION .text
-  GLOBAL mystrchr
+  GLOBAL strchr
 
 mystrchr:
     push rbp

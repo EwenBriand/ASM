@@ -1,5 +1,5 @@
 SECTION .text
-  GLOBAL mymemcpy
+  GLOBAL memcpy
 
 mymemcpy:
     push rbp

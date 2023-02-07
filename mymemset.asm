@@ -1,5 +1,5 @@
 SECTION .text
-  GLOBAL mymemset
+  GLOBAL memset
 
 mymemset:
     push rbp

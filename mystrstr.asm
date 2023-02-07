@@ -1,6 +1,6 @@
 
 SECTION .text
-    global mystrstr
+    global strstr
 
 
 mystrstr:

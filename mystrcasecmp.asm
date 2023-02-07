@@ -1,6 +1,6 @@
 
 SECTION .text
-    global mystrcasecmp
+    global strcasecmp
 
 mystrcasecmp:
     push rbp

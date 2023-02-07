@@ -1,5 +1,5 @@
 SECTION .text
-  global mystrcspn
+  global strcspn
 
 
 mystrcspn:
