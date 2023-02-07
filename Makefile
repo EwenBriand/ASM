@@ -5,7 +5,18 @@
 ## my Makefile
 ##
 
-SRC	= 	my.asm
+SRC	= 	mystrcspn.asm \
+		mystrlen.asm \
+		mystrchr.asm \
+		mystrrchr.asm \
+		mymemset.asm \
+		mymemcpy.asm \
+		mymemmove.asm \
+		mystrcmp.asm \
+		mystrncmp.asm \
+		mystrcasecmp.asm \
+		mystrstr.asm \
+		mystrpbrk.asm \
 
 OBJ	=	$(SRC:.asm=.o)
 
@@ -25,13 +36,15 @@ NAME	=	a.out
 
 LIBNAME	=	libasm.so
 
-all:	$(NAME)
+all:	makelib
 
 $(NAME):	makelib
 	gcc -o $(NAME) $(MAIN) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS)
 
-makelib:
-	nasm -f elf64 -o $(OBJ) $(SRC)
+%.o : %.asm
+	nasm -f elf64 $< -o $@
+
+makelib: $(OBJ)
 	gcc -shared -fPIC -o $(LIBNAME) $(OBJ)
 
 clean:
