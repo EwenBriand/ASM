@@ -24,7 +24,7 @@ MAIN	=	main.c
 
 CPPFLAGS	=	-I ./include
 
-CFLAGS	=	-Wall -Wextra
+CFLAGS	=	-Wall -Wextra -fPIC
 
 LDFLAGS =	-L ./ -lasm
 
