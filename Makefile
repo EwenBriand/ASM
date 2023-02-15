@@ -45,7 +45,7 @@ $(NAME):	makelib
 	nasm -f elf64 $< -o $@
 
 makelib: $(OBJ)
-	gcc -shared -fPIC -o $(LIBNAME) $(OBJ)
+	gcc -shared -o $(LIBNAME) $(OBJ) -nolibc
 
 clean:
 	rm -rf *~
