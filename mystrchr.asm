@@ -1,7 +1,7 @@
 SECTION .text
   GLOBAL strchr
 
-mystrchr:
+strchr:
     push rbp
     push rdi
     push rsi

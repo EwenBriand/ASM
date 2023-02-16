@@ -2,7 +2,7 @@
 SECTION .text
     global strcasecmp
 
-mystrcasecmp:
+strcasecmp:
     push rbp
     mov rcx, -1
 

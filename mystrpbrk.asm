@@ -2,7 +2,7 @@ SECTION .text
   global strpbrk
 
 
-mystrpbrk:
+strpbrk:
     push rbp
     mov rbp, rsp
     push rdi

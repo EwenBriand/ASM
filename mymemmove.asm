@@ -18,7 +18,7 @@ SECTION .text
 ;     pop rbp
 ;     ret
 
-mymemmove:
+memmove:
     push rbp
     push rdi
     push rsi

@@ -1,7 +1,7 @@
 SECTION .text
   Global strcmp
 
-mystrcmp:
+strcmp:
     push rbp
     push rdi
     push rsi

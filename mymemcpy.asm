@@ -1,7 +1,7 @@
 SECTION .text
   GLOBAL memcpy
 
-mymemcpy:
+memcpy:
     push rbp
     push rdi
     push rsi

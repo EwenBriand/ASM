@@ -1,7 +1,7 @@
 SECTION .text
   GLOBAL memset
 
-mymemset:
+memset:
     push rbp
     push rdi
     push rsi

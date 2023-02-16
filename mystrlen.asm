@@ -2,7 +2,7 @@ SECTION .text
   GLOBAL strlen
 
 
-mystrlen:
+strlen:
     push rbp
     push rdi
     mov rbp, rsp

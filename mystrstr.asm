@@ -3,7 +3,7 @@ SECTION .text
     global strstr
 
 
-mystrstr:
+strstr:
     push rbp
     mov rbp, rsp
     push rdi

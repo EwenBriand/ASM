@@ -2,7 +2,7 @@
 SECTION .text
     global strncmp
 
-mystrncmp:
+strncmp:
     push rbp
     mov rbp, rsp
     push rdi

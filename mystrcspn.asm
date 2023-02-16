@@ -2,7 +2,7 @@ SECTION .text
   global strcspn
 
 
-mystrcspn:
+strcspn:
   push rbp
   mov rcx, -1
   mov r8, rdi
