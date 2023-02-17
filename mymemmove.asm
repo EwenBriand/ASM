@@ -26,7 +26,15 @@ memmove:
     push r10
     mov rbp, rsp
     mov r10, -1
+    sub rdx, 1
     mov rax, 0
+
+    cmp rdi, 0
+    je  endMEMMOVE
+    cmp rsi, 0
+    je  endMEMMOVE
+    cmp rdx, 0
+    jle  endMEMMOVE
 
     cmp rdi, rsi
     je finish
@@ -41,7 +49,7 @@ great:
     cmp rdx, r10
     jne great
 
-    mov rax, rdi
+    lea rax, [rdi]
     pop r10
     pop rdx
     pop rsi
@@ -52,11 +60,15 @@ great:
 less:
     sub rdx, 1
     mov al, byte [rsi + rdx]
+l1:
     mov byte [rdi + rdx], al
-    cmp byte [rdx], 1
+l2:
+    cmp rdx, 0
+l3:
     jne less
 
     mov rax, rdi
+l4:
     pop r10
     pop rdx
     pop rsi
@@ -65,7 +77,17 @@ less:
     ret
 
 finish:
-    mov rax, rdi
+    lea rax, [rdi]
+    pop r10
+    pop rdx
+    pop rsi
+    pop rdi
+    pop rbp
+    ret
+
+
+endMEMMOVE:
+    mov rax, 0
     pop r10
     pop rdx
     pop rsi
@@ -104,3 +126,10 @@ finish:
 ;     mov rsp, rbp
 ;     pop rbp
 ;     ret
+
+
+; strlen vide ok
+; mem... ptete null
+; strncmp taille trops grande stop \0
+; strrchr a revoir when \0
+; strstr a revoir when \0
