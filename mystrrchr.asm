@@ -10,13 +10,13 @@ strrchr:
     mov r10, -1
     mov rax , 0
 
-chrrloop:                       ; do {
-    inc  r10                  ; ++p
+chrrloop:
+    inc  r10
     cmp byte [rdi + r10] , sil
     je chrrloop_true
     cmp byte [rdi + r10] , 0
-    jne chrrloop             ; }while(*p != 0);
-                           ; RAX points at the terminating 0 byte = one-past-end of the real data
+    jne chrrloop
+
     pop r10
     pop rsi
     pop rdi
