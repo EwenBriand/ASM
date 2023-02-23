@@ -1,8 +1,8 @@
 
 SECTION .text
-    GLOBAL mystrncmp
+    GLOBAL strncmp
 
-mystrncmp:
+strncmp:
     push rbp
     push rdi
     push rsi
